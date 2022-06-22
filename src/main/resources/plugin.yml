@@ -1,0 +1,11 @@
+name: EnderChestLimiter
+version: '${project.version}'
+main: me.jacob.echestlimiter.EnderChestLimiter
+api-version: 1.13
+description: Lets you prevent certain items from being placed into an ender chest.
+
+commands:
+  reloadechestlimiter:
+    description: Reloads the config
+    usage: /reloadechestlimiter
+    aliases: [rlechest]

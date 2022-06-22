@@ -1,0 +1,13 @@
+# The message to send to the player when they try to put a blocked item in an ender chest.
+blocked-message: "&cYou can't put that item in your ender chest!"
+
+# Should opped players be able to bypass the ender chest blocking?
+bypass-with-op: false
+
+# Players with this permission will be able to bypass the ender chest blocking.
+# Leave blank for none
+bypass-permission:
+
+# A list of items that won't be able to be placed in ender chests (e.g. diamond_sword).
+blocked-items:
+  - "dragon egg"
