@@ -7,7 +7,6 @@ import org.bukkit.Material;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public final class Config {
 	private static final EnderChestLimiter plugin = EnderChestLimiter.getInstance();
@@ -30,9 +29,7 @@ public final class Config {
 
 		blockedItems = new ArrayList<>();
 		for(String materialName : config.getStringList("blocked-items")) {
-			Material m = getMaterial(
-					materialName.replace(' ', '_').toUpperCase(Locale.ENGLISH)
-			);
+			Material m = Material.matchMaterial(materialName);
 
 			if(m == null) {
 				plugin.getLogger().warning("Material \"" + materialName + "\" does not exist!");
@@ -63,13 +60,5 @@ public final class Config {
 		}
 
 		plugin.getLogger().info("Config reloaded!");
-	}
-
-	private static Material getMaterial(String materialName) {
-		try {
-			return Material.valueOf(materialName);
-		} catch(Exception e) {
-			return null;
-		}
 	}
 }
